@@ -45,24 +45,3 @@ class Data:
     def __init__(self, data, ip):
         self.data = data
         self.ip = ip
-
-
-sv1 = Server()
-sv2 = Server()
-router = Router()
-
-router.link(sv1)
-router.link(sv2)
-
-sv1.send_data("Test", sv2.ip)
-sv2.send_data("Test2", sv1.ip)
-
-router.send_data()
-
-received_data = sv1.get_data()
-for data in received_data:
-    print(f"IP {sv1.ip} received: {data.data}")
-
-received_data = sv2.get_data()
-for data in received_data:
-    print(f"IP {sv2.ip} received: {data.data}")
