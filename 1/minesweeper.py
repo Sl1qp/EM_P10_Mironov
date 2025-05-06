@@ -1,7 +1,6 @@
 import dataclasses
 from random import sample
-from typing import List, Tuple
-from xmlrpc.client import FastParser
+from typing import List
 
 
 @dataclasses.dataclass
