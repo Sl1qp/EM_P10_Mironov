@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class ObjList():
     def __init__(self, data):
         self.__prev = None
